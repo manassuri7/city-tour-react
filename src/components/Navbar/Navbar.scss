@@ -1,0 +1,28 @@
+@import "../../index.scss";
+.navbar{
+    background:$mainBlack;
+    padding:0.5rem 1rem;
+    display:grid;//only effects children i.e image and links
+    grid-template-columns: auto 1fr;// image sets itself auto and rest links take up the rmaining space
+
+}
+.nav-links{
+align-self:center;
+list-style-type:none;
+display: grid;
+grid-template-columns: repeat(3,1fr);//distributes all 3 links equally
+text-align: center;
+}
+.nav-link{
+    color: $mainGrey;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    transition:all 0.3s linear;
+    &:hover{
+        color:$mainGreen;
+    }
+}
+.active{
+    color:$mainGreen;
+}
